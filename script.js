@@ -41,3 +41,15 @@ class Person extends Human { // here we extend on class with another
 const person = new Person();
 person.printMyName();
 person.printGender();
+
+// ES7 class example
+class checkClass {
+    hello = "sparta";
+
+    printHello = () => {
+        console.log(this.hello);
+    }
+}
+
+const bla = new checkClass();
+bla.printHello();
