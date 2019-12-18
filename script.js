@@ -53,3 +53,26 @@ class checkClass {
 
 const bla = new checkClass();
 bla.printHello();
+
+// Spread operator
+const numbers = [1, 2, 3];
+const newNumbers = [...numbers, 4]; // here ... is spread, just copies all elements from array
+console.log(newNumbers);
+
+const person2 = {
+    name: "Alex"
+}
+
+const newPerson = {
+    ...person2,
+    age: 27
+}
+
+console.log(newPerson);
+
+// Rest operator
+const filterFunction = (...args) => { // rest operator is used more in functions
+    return args.filter(el => el === 1);
+}
+
+console.log(filterFunction(1, 2, 3));
