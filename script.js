@@ -81,3 +81,11 @@ console.log(filterFunction(1, 2, 3));
 const numbers2 = [1, 2, 3];
 [num1, num2] = numbers2; // array destructuring, just getting elements from array
 console.log(num1 + " " + num2);
+
+// Array functions
+const numberFinal = [1, 2, 3];
+const doubleArray = numberFinal.map((num) => { // map function will go throw each element of array
+    return num * 2;
+});
+
+console.log(doubleArray);
