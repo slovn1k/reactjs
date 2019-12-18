@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h1>Hi, I am react APP</h1>
       </div>
     );
+
+    // example of creating reactelement
+    // return React.createElement('div', null, 'h1', "I'am react App"); here we create a div that has inside two textes
+
+    // return React.createElement("div", { className: "App" }, React.createElement("h1", null, "Does this work now?")); here we create div with class App that has another react element with it's text
   }
 }
 
