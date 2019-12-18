@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import './App.css';
-import Person from './Person/Person'; // here we are importing new component
+import React, { Component } from "react";
+import "./App.css";
+import Person from "./Person/Person"; // here we are importing new component
 
 class App extends Component {
   render() {
@@ -8,7 +8,10 @@ class App extends Component {
       <div className="App">
         <h1>Hi, I am react APP</h1>
         <p>This really works!</p>
-        <Person /> {/* here we are using our new component */}
+        <Person name="Alex" age="27">
+          My hobbies: Racing
+        </Person>
+        {/* here we are using our new component */}
       </div>
     );
 
