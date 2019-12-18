@@ -76,3 +76,8 @@ const filterFunction = (...args) => { // rest operator is used more in functions
 }
 
 console.log(filterFunction(1, 2, 3));
+
+// Destructuring
+const numbers2 = [1, 2, 3];
+[num1, num2] = numbers2; // array destructuring, just getting elements from array
+console.log(num1 + " " + num2);
