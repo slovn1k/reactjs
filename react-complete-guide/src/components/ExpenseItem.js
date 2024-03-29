@@ -3,15 +3,20 @@ import "./ExpenseItem.css";
 
 // here we use props parameter to use parameters inside the function
 function ExpenseItem(props) {
-    const expenseDate = new Date(2024, 2, 29);
-    const expenseTitle = "Car Insurance";
-    const expenseAmount = 294.67;
+    // here we add some javascript to constants
+    const month = props.date.toLocaleString("en-US", { month: "long" });
+    const day = props.date.toLocaleString("en-US", { day: "2-digit" });
+    const year = props.date.getFullYear();
 
     return (
         // Here we use className to add CSS classes to the html code
         // Here we use the props parameter to get data sent
         <div className="expense-item">
-            <div>{props.date.toLocaleString()}</div>
+            <div>
+                <div>{month}</div>
+                <div>{year}</div>
+                <div>{day}</div>
+            </div>
             <div className="expense-item__description">
                 <h2>{props.title}</h2>
                 <div className="expense-item__price">${props.amount}</div>
