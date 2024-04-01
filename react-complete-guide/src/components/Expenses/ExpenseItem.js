@@ -1,13 +1,19 @@
 import ExpenseDate from "./ExpenseDate";
+
+// Here we import react hook to call useState
+import {useState} from "react";
+
 // Here we import the css component
 import "./ExpenseItem.css";
 import Card from "../UI/Card";
 
 // here we use props parameter to use parameters inside the function
 function ExpenseItem(props) {
-
+    // Here we use react state to set title
+    // We register a constant that contains the returning value and the updating function of the state function
+    const [title, setTitle] = useState(props.title);
     const clickHandler = () => {
-        console.log('clicked');
+        setTitle('Updated!');
     }
 
     return (
@@ -17,7 +23,7 @@ function ExpenseItem(props) {
         <Card className="expense-item">
             <ExpenseDate date={props.date}/>
             <div className="expense-item__description">
-                <h2>{props.title}</h2>
+                <h2>{title}</h2>
                 <div className="expense-item__price">${props.amount}</div>
             </div>
             {/* Arrow function used to fire click event */}
