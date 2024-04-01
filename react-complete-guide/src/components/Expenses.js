@@ -1,12 +1,13 @@
 import "./Expenses.css";
 
 import ExpenseItem from "./ExpenseItem";
+import Card from "./Card";
 
 function Expenses(props) {
     return (
         // Here we call the custom component to be rendered in th code
         // Here we use props to send data
-        <div className="expenses">
+        <Card className="expenses">
             <ExpenseItem
                 title={props.items[0].title}
                 amount={props.items[0].amount}
@@ -27,7 +28,7 @@ function Expenses(props) {
                 amount={props.items[3].amount}
                 date={props.items[3].date}
             />
-        </div>
+        </Card>
     );
 }
 
