@@ -1,7 +1,7 @@
 import ExpenseDate from "./ExpenseDate";
 // Here we import the css component
 import "./ExpenseItem.css";
-import Card from "./Card";
+import Card from "../UI/Card";
 
 // here we use props parameter to use parameters inside the function
 function ExpenseItem(props) {

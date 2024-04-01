@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 // Here we import the component to use it in this route component
-import Expenses from "./components/Expenses";
+import Expenses from "./components/Expenses/Expenses";
 
 function App() {
     // here we create some objects with data
