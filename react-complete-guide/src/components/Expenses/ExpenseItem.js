@@ -1,7 +1,7 @@
 import ExpenseDate from "./ExpenseDate";
 
 // Here we import react hook to call useState
-import {useState} from "react";
+import { useState } from "react";
 
 // Here we import the css component
 import "./ExpenseItem.css";
@@ -13,15 +13,15 @@ function ExpenseItem(props) {
     // We register a constant that contains the returning value and the updating function of the state function
     const [title, setTitle] = useState(props.title);
     const clickHandler = () => {
-        setTitle('Updated!');
-    }
+        setTitle("Updated!");
+    };
 
     return (
         // Here we use className to add CSS classes to the html code
         // Here we use the props parameter to get data sent
         // Here we use Card component to wrap some content
         <Card className="expense-item">
-            <ExpenseDate date={props.date}/>
+            <ExpenseDate date={props.date} />
             <div className="expense-item__description">
                 <h2>{title}</h2>
                 <div className="expense-item__price">${props.amount}</div>
